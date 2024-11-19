@@ -1,0 +1,677 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+       
+       .main-content {
+            margin-top: 30px;
+}
+    
+        footer {
+            background-color: #f1f2f6; /* Optional: Set a background color for visibility */
+            text-align: center; /* Center the text */
+            padding: 10px; /* Add some padding */
+}
+        h1 {
+            color: #ffffff;
+            font-family: 'Lora', sans-serif;
+            font-size: 4rem; /* Increase the font size */
+            text-shadow: 2px 2px 15px #1e90ff; /* Add text shadow */
+            font-weight: bolder;
+            text-align: center;
+        }
+        h2{
+            color: #ffffff;
+            font-family: 'Lora', sans-serif;
+            font-size: 3rem; /* Increase the font size */
+            text-shadow: 2px 2px 15px #1e90ff; /* Add text shadow */
+            font-weight: bolder;
+            text-align: center;
+        }
+        /* nav start */
+        .navbar-brand {
+            font-family: 'Lora', sans-serif; /* Apply the new font */
+            font-weight: 700; /* Bold */
+            color: #70a1ff;
+            text-shadow: 2px 2px 4px ;
+        }
+        .navbar-nav .nav-link {
+            font-family: 'Lora', sans-serif; /* Apply the new font */
+            font-weight: 400; /* Regular */
+        }
+        .navbar-custom {
+            background-color: #f1f2f6; /* Change this color to your desired navbar color */
+        }
+        .navbar-custom .nav-link {
+            color: #70a1ff; /* Change link color to white */
+        }
+        .navbar-custom .nav-link:hover {
+            color: #1e90ff; /* Change link hover color */
+        }
+        .btn-custom {
+            background-color: #70a1ff; /* Change this color to your desired button color */
+            color: white; /* Change text color */
+        }
+        .btn-custom:hover {
+            background-color: #1e90ff; /* Change this color for hover effect */
+        }
+        /* nav end */
+        .hero {
+            background-size: cover;
+            background-position: center;
+            color: white;
+            height: 600px; /* Adjust height as needed */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .hero img {
+            max-width: 100%;
+            height: auto;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 1; /* Ensure the image is behind the text */
+        }
+        .hero-content {
+            position: relative; /* Positioning for text overlay */
+            z-index: 2; /* Ensure the text is above the image */
+        }
+        .hero-content h1 {
+            font-size: 4rem; /* Increase the font size */
+            text-shadow: 6px 6px 8px #1e90ff; /* Add text shadow */
+            font-weight: bolder;
+        }
+        .hero-content p{
+            font-size: 1.5rem; /* Adjust font size */
+            text-shadow: 2px 2px 4px #1e90ff; /* Add text shadow */
+            font-weight: 400;
+        }
+        .btn-custom {
+            background-color:#70a1ff ; /* Make the background transparent */
+            color: white; /* Set the text color */
+            border: 2px solid #70a1ff; /* Optional: Add a border */
+            transition: background-color 0.3s, color 0.3s; /* Smooth transition for hoer effects v*/
+        }
+
+        .btn-custom:hover {
+            background-color: rgba(255, 255, 255, 0.2); /* Optional: Add a semi-transparent background on hover */
+            color: #1e90ff; /* Change text color on hover */
+        }
+        /* about us start */
+        .about-us{
+            background-color:#70a2ffd3;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px #1e8fff;
+        }
+        .about-title{
+            color: #ffffff;
+            font-size: 4rem; /* Increase the font size */
+            text-shadow: 4px 4px 6px #1e8fff; /* Add text shadow */
+            font-weight: bolder;
+            font-family: Lora,sans-serif;
+            margin-bottom: 30px;
+       
+        }
+        .about-text{
+            color: #ffffff;
+            text-shadow: 2px 2px 4px #57606f; /* Add text shadow */
+            font-size: 1.5rem;
+            font-family: sans-serif;
+        }
+        .about{
+            background-image: url('images/top-view-homemade-cookies-with-copy-space.jpg');
+            background-size: cover;
+            padding:30px;
+        }
+        
+        .mv-card {
+                
+            width: 630px; /* Set a fixed width */
+            height: 300px; /* Set a fixed height */
+            margin: auto; /* Center the card horizontally */
+            margin-top: 40px; /* Adjust the value as needed */
+            padding: 5px;
+            display: flex; /* Use flexbox for alignment */
+            flex-direction: column; /* Stack children vertically */
+            justify-content: center; /* Center content vertically */
+            text-align: center; /* Center text */
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            box-shadow: 0px 4px 10px #1e8fff;
+            background-color:#70a2ffe2;
+            
+        }
+        
+        .mv-card:hover{
+            transform: scale(1.05); /* Scale up the card on hover */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+            background-color:#70a1ff; /* Default background color */
+        }
+        .mv-card .card-title {
+            position: absolute; /* Fix the title at the top */
+            top: 20px; /* Distance from the top */
+            left: 50%; /* Center horizontally */
+            transform: translateX(-50%); /* Adjust to center */
+            margin: 0; /* Remove default margin */
+            font-size: 2rem; /* Adjust font size */
+            color: #ffffff; /* Change text color */
+            text-shadow: 2px 2px 4px #1e90ff; /* Optional: add shadow for better visibility */
+            z-index: 1; /* Ensure it's above other content */
+        }
+
+        .mv-card .card-text {
+            font-size: 1.8rem; /* Increase font size for card text */
+            color: #ffffff;
+            text-shadow: 2px 2px 4px #57606f; /* Add text shadow */
+        }
+    /* services section */
+        .card-body {
+        margin-top: 60px; /* Add space for the title */
+        padding: 10px; /* Adjust padding */
+        
+        }
+        .services {
+            margin-top: 50px; /* Add some space above the services section */
+        }
+
+        .card {
+            border: 2px solid #70a1ff; /* Set the border color and width */
+            border-radius: 10px; /* Optional: add rounded corners */
+            box-shadow: 0px 4px 15px #1e8fff;
+        }
+        .card-img-top {
+            width: 100%; /* Make the image responsive */
+            height: 200px; /* Set a fixed height */
+            object-fit: cover; /* Ensure the image covers the area without distortion */
+        }
+       /* end about us */
+        /* start testimonial */
+        .card-title {
+            font-family: 'Lora', sans-serif; /* Ensure consistent font */
+
+        }
+        
+        .testimonials {
+            background-color: #ced6e0; /* Light background color */
+            padding: 30px; /* Add padding for spacing */
+
+             margin-top: 30px; /* Space above the section */
+    
+        }
+        .carousel-card {
+            width: 300px; /* Set a fixed width */
+            height: 300px; /* Set a fixed height */
+            padding-top: 40px;
+            margin: auto; /* Center the card horizontally */
+            display: flex; /* Use flexbox for alignment */
+            border-radius: 20px;
+            flex-direction: column; /* Stack children vertically */
+            justify-content: center; /* Center content vertically */
+            align-items: center; /* Center content horizontally */
+            text-align: center; /* Center text */
+            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition */
+            background-color: #ffffff; /* Default background color */
+}
+
+        .carousel-card img {
+            width: 100px; /* Set a fixed width for the image */
+            height: 100px; /* Set a fixed height for the image */
+            margin: auto; /* Center the image */
+            border-radius: 50%; /* Make the image circular */
+}
+
+        .carousel-card:hover {
+            transform: scale(1.05); /* Scale up the card on hover */
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+/* end testimonial */
+/* gallery section */
+
+        .card-gallery {
+            border: none; /* Remove card border */
+            justify-content: center;
+    
+}
+
+        .gallery-img {
+            height: 200px; /* Set a fixed height for images */
+            border: 5px solid #70a1ff;
+            object-fit: cover; /* Ensure images cover the area without distortion */
+
+}
+/* end gallery section */
+/* contact */
+.container h2 {
+    margin-bottom: 30px; /* Space below the section title */
+
+}
+
+.container h4 {
+    margin-top: 20px; /* Space above the subsection titles */
+}
+
+.form-label {
+    font-weight: bold; /* Make form labels bold */
+}
+
+/* contact */
+    </style>
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-custom fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Heavens Gate</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active" aria-current="page" href="#Services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Gallery">Gallery</a>
+                    </li>
+                </ul>
+                <ul class="navbar-nav ms-auto"> <!-- Add this ul for right-aligned items -->
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Contact">Contact Us</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+      
+    <!-- Hero Section -->
+<!-- Hero Section -->
+<div class="hero" style="position: relative; height: 600px;">
+    <video autoplay muted loop style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;">
+        <source src="videos/6772574-uhd_3840_2160_30fps.mp4" type="video/mp4"> <!-- Change this to the path of your video -->
+        Your browser does not support the video tag.
+    </video>
+    <div class="hero-content" >
+        <h1 class="hero-welcome">Welcome to Heavens Gate</h1>
+        <p class="lead">Enter Heaven's Gate, and Let the Weight of the World Drift Away.</p>
+        <a href="#about" class="btn btn-custom btn-lg">Explore Now</a>
+    </div>
+</div>
+
+
+    <br><br>
+
+<!-- About Us Section -->
+<div id="about" class="mt-5 about">
+    <h1 class="about-title text-center">About Us</h1>
+  <div class="about-us">
+       
+        <span class="about-text text-center">Welcome to Heaven's Gate, a haven where serenity unfolds. Here, we believe in the transformative power of touch, guiding our clients through a journey of relaxation and rejuvenation. Nestled in the heart of tranquility, our sanctuary invites you to escape the clamor of the world and embrace the gentle embrace of bliss. With every high-quality massage, we weave a tapestry of comfort, allowing you to forget your worries and drift into a realm of peace. Join us, and let us illuminate your path to well-being, one soothing moment at a time.</span>
+    </div>
+
+
+    <!-- Mission and Vision Cards -->
+    <div class="row misvis-card mt-5">
+        <h1>Mission and Vision</h1>
+
+        <div class="col-md-6">
+            <div class="card mv-card">
+                <h5 class="card-title text-center">Our Mission</h5>
+                <div class="card-body">
+                    <p class="card-text">Our mission is to allow our clients to savor the warmth of heaven, providing high-quality massages that soothe the body, calm the mind, and gently lift the weight of their woes.</p>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-6">
+            <div class="card mv-card">
+                <h5 class="card-title text-center">Our Vision</h5> 
+                <div class="card-body">
+                    <p class="card-text">Our vision is to be a sanctuary in this bustling world, where clients can leave behind their worries and pain.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- End of About Us Section -->
+    <br><br><br>
+        <!-- Main content goes here -->
+         <!-- start services section -->
+    <div class="container main-content">
+        <h1>Our Services</h1>
+        
+        <div id="Services" class="services">
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="images/BACK.jpg" class="card-img-top" alt="Service 1">
+                        <div class="card-body">
+                            <h5 class="card-title">Swedish Massage</h5>
+                            <p class="card-text">Experience the timeless art of relaxation with our Swedish Massage. Designed to ease tension and rejuvenate the body, this gentle yet effective massage uses long, flowing strokes to improve circulation and melt away stress, leaving you refreshed and revitalized.</p>
+                            <button class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#swedishModal">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="images/hotstone.jpg" class="card-img-top" alt="Service 2">
+                        <div class="card-body">
+                            <h5 class="card-title">Hot Stone Massage</h5>
+                            <p class="card-text">Let the warmth of smooth, heated stones transport you to a realm of tranquility. Our Hot Stone Massage combines therapeutic heat with gentle pressure to release deep-seated tension, soothe sore muscles, and promote a profound sense of calm and well-being.</p>
+                            <button class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#hotStoneModal">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card mb-4">
+                        <img src="images/aromatic.jpg" class="card-img-top" alt="Service 3">
+                        <div class="card-body">
+                            <h5 class="card-title">Aromatherapy Massage</h5>
+                            <p class="card-text">Indulge your senses with our Aromatherapy Massage, a harmonious blend of soothing touch and essential oils. Each oil is carefully selected to enhance relaxation, uplift the spirit, and restore balance, leaving you enveloped in serenity and a sense of renewal</p>
+                            <button class="btn btn-custom" data-bs-toggle="modal" data-bs-target="#aromaModal">Learn More</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- end services section -->
+<!-- Modals -->
+<!-- Swedish Massage Modal -->
+<div class="modal fade" id="swedishModal" tabindex="-1" aria-labelledby="swedishModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="swedishModalLabel">Swedish Massage</h5>
+            </div>
+            <div class="modal-body">
+                A soothing massage technique using heated stones to deeply relax muscles and improve circulation.
+                <br><br>
+                <strong>Benefits</strong>
+                <ul>
+                    <li>Eases muscle tension and stiffness</li>
+                    <li>Promotes deeper relaxation</li>
+                    <li>Boosts blood flow and detoxification</li>
+                </ul>
+                <strong>What to Expect</strong>
+                <ul>
+                    <li>Warm stones placed on key areas of the body</li>
+                    <li>Gentle pressure and smooth strokes with heated stones</li>
+                </ul>
+                <strong>Before Your Session</strong>
+                <ul>
+                    <li>Arrive well-hydrated and wear loose clothing</li>
+                    <li>Avoid caffeine and alcohol before your session</li>
+                </ul>
+                <strong>Aftercare Tips</strong>
+                <ul>
+                    <li>Drink plenty of water to flush out toxins</li>
+                    <li>Rest and avoid intense physical activity for a day</li>
+                </ul>
+                <strong>Duration:</strong> 30-50 mins
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Hot Stone Massage Modal -->
+<div class="modal fade" id="hotStoneModal" tabindex="-1" aria-labelledby="hotStoneModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="hotStoneModalLabel">Hot Stone Massage</h5>
+            </div>
+            <div class="modal-body">
+                A soothing massage technique using heated stones to deeply relax muscles and improve circulation.
+                <br><br>
+                <strong>Benefits</strong>
+                <ul>
+                    <li>Eases muscle tension and stiffness</li>
+                    <li>Promotes deeper relaxation</li>
+                    <li>Boosts blood flow and detoxification</li>
+                </ul>
+                <strong>What to Expect</strong>
+                <ul>
+                    <li>Warm stones placed on key areas of the body</li>
+                    <li>Gentle pressure and smooth strokes with heated stones</li>
+                </ul>
+                <strong>Before Your Session</strong>
+                <ul>
+                    <li>Arrive well-hydrated and wear loose clothing</li>
+                    <li>Avoid caffeine and alcohol before your session</li>
+                </ul>
+                <strong>Aftercare Tips</strong>
+                <ul>
+                    <li>Drink plenty of water to flush out toxins</li>
+                    <li>Rest and avoid intense physical activity for a day</li>
+                </ul>
+                <strong>Duration:</strong> 60 mins
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Aromatherapy Massage Modal -->
+<div class="modal fade" id="aromaModal" tabindex="-1" aria-labelledby="aromatherapyModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="aromatherapyModalLabel">Aromatherapy Massage</h5>
+            </div>
+            <div class="modal-body">
+                A natural therapy that uses essential oils to promote relaxation, reduce stress, and uplift mood.
+                <br><br>
+                <strong>Benefits</strong>
+                <ul>
+                    <li>Relieves stress and tension</li>
+                    <li>Enhances mental clarity</li>
+                    <li>Boosts overall well-being</li>
+                </ul>
+                <strong>Popular Essential Oils</strong>
+                <ul>
+                    <li><strong>Lavender:</strong> Calming, great for relaxation</li>
+                    <li><strong>Eucalyptus:</strong> Refreshing, clears the mind</li>
+                    <li><strong>Peppermint:</strong> Energizing, soothes aches</li>
+                </ul>
+                <strong>Before Your Session</strong>
+                <ul>
+                    <li>Arrive relaxed and stay hydrated</li>
+                    <li>Avoid heavy meals</li>
+                </ul>
+                <strong>Aftercare Tips</strong>
+                <ul>
+                    <li>Drink water to stay hydrated</li>
+                    <li>Rest to prolong the relaxation</li>
+                </ul>
+                <strong>Duration:</strong> 40-50 mins
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Testimonials Section -->
+<div class="mt-5 testimonials">
+    <h2 class="text-center">Testimonials</h2>
+    <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <div class="carousel-card">
+                            <img src="images/yun_chee.jpg" class="card-img-top rounded-circle" alt="John Doe" style="width: 100px; height: 100px; margin: auto;">
+                            <div class="card-body">
+                                <p class="card-text">"This place is amazing! The staff is so friendly and the services are top!"</p>
+                                <h5 class="card-title">-Yun Che</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="carousel-card">
+                            <img src="images/yang_kai.jpg" class="card-img-top rounded-circle" alt="Jane Smith" style="width: 100px; height: 100px; margin: auto;">
+                            <div class="card-body">
+                                <p class="card-text">"I had the best massage of my life here. Highly recommend!"</p>
+                                <h5 class="card-title">- Yang Kai</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="carousel-card">
+                            <img src="images/gu_changge.jpg" class="card-img-top rounded-circle" alt="Emily Johnson" style="width: 100px; height: 100px; margin: auto;">
+                            <div class="card-body">
+                                <p class="card-text">"A wonderful experience! I felt so relaxed and rejuvenated."</p>
+                                <h5 class="card-title">- Gu Changge</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="row text-center">
+                    <div class="col-md-4">
+                        <div class="carousel-card">
+                            <img src="images/senior_white.jpg" class="card-img-top rounded-circle" alt="Michael Brown" style="width: 100px; height: 100px; margin: auto;">
+                            <div class="card-body">
+                                <p class="card-text">"Absolutely loved my experience here!"</p>
+                                <h5 class="card-title">-Senior White</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="carousel-card">
+                            <img src="images/song_shuhang.jpg" class="card-img-top rounded-circle" alt="Sarah Wilson" style="width: 100px; height: 100px; margin: auto;">
+                            <div class="card-body">
+                                <p class="card-text">"The ambiance is so relaxing, I didn't want to leave!"</p>
+                                <h5 class="card-title">-Song Shuhang</h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4">
+                        <div class="carousel-card">
+                            <img src="images/chen_ge.jpg" class="card-img-top rounded-circle" alt="David Lee" style="width: 100px; height: 100px; margin: auto;">
+                            <div class="card-body">
+                                <p class="card-text">"Highly professional staff and great services!"</p>
+                                <h5 class="card-title">-Chen Ge</h5>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+   
+
+        <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+    </div>
+</div>
+     <!-- end testimonials -->
+ 
+<!-- Gallery Section -->
+<div id="Gallery" class="container card-gallery mt-5 mb-5">
+    <h2 class="text-center">Gallery</h2>
+    <div class="row">
+        <div class="col-md-4 mb-4">
+            <div class="gallery-img">
+                <img src="images/1.jpg" class="card-img-top" alt="Gallery Image 1">
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="gallery-img">
+                <img src="images/e.jpg" class="card-img-top" alt="Gallery Image 2">
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="gallery-img">
+                <img src="images/q.jpg" class="card-img-top" alt="Gallery Image 3">
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="gallery-img">
+                <img src="images/r.jpg" class="card-img-top" alt="Gallery Image 4">
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="gallery-img">
+                <img src="images/t.jpg" class="card-img-top" alt="Gallery Image 5">
+            </div>
+        </div>
+        <div class="col-md-4 mb-4">
+            <div class="gallery-img">
+                <img src="images/w.jpg" class="card-img-top" alt="Gallery Image 6">
+            </div>
+        </div>
+    </div>
+</div>
+
+<br><br>
+<!-- End of Gallery Section -->
+ <!-- Contact and Location Section -->
+<div id="Contact" class="container mt-5 mb-5">
+    <h2 class="text-center">Contact Us</h2>
+    <div class="row">
+        <div class="col-md-6">
+            <h4>Get in Touch</h4>
+            <form>
+                <div class="mb-3">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" required>
+                </div>
+                <div class="mb-3">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="email" class="form-control" id="email" required>
+                </div>
+                <div class="mb-3">
+                    <label for="message" class="form-label">Message</label>
+                    <textarea class="form-control" id="message" rows="4" required></textarea>
+                </div>
+                <button type="submit" class="btn btn-custom">Send Message</button>
+            </form>
+        </div>
+        <div class="col-md-6">
+            <h4>Our Location</h4>
+            <p>123 Heaven's Gate St.<br> Serenity City, SC 12345</p>
+            <p><strong>Phone:</strong> (123) 456-7890</p>
+            <p><strong>Email:</strong> contact@heavensgate.com</p>
+            <div class="mt-3">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3151.835434509488!2d144.9537353153168!3d-37.81720997975112!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad642af0f3e9b61%3A0x5045675218ce6f0!2sHeaven's%20Gate!5e0!3m2!1sen!2sau!4v1616161616161!5m2!1sen!2sau" width="100%" height="250" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End of Contact and Location Section -->
+   <!-- Footer -->
+<footer class="footer">
+    <div class="text-center p-3">
+        © 2023 Heavens Gate Massage 
+        <a class="text-dark">Privacy Policy</a> |
+        <a class="text-dark">Terms of Service</a>
+    </div>
+</footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+</body>
+</html>
